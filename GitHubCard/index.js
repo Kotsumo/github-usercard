@@ -7,7 +7,7 @@ import axios from 'axios'
 
 axios.get('https://api.github.com/users/Kotsumo')
   .then(res => {
-    console.log()
+    console.log(res)
   })
   .catch(err => {
     debugger
@@ -58,7 +58,44 @@ const followersArray = [];
       </div>
     </div>
 */
+function cardMethod(card){
 
+  const cardDiv = document.createElement('div')
+  const cardimg = document.createElement('img')
+  const cardInfo = document.createElement('div')
+  const cardName = document.createElement('h3')
+  const cardUser = document.createElement('p')
+  const cardLocation = document.createElement('p')
+  const cardProfile = document.createElement('p')
+  const cardFollowers = document.createElement('p')
+  const cardFollowing = document.createElement('p')
+  const cardBio = document.createElement('p')
+  
+  cardDiv.appendChild(cardimg)
+  cardDiv.appendChild(cardInfo)
+  cardInfo.appendChild(cardName)
+  cardInfo.appendChild(cardUser)
+  cardInfo.appendChild(cardLocation)
+  cardInfo.appendChild(cardProfile)
+  cardInfo.appendChild(cardFollowers)
+  cardInfo.appendChild(cardFollowing)
+  cardInfo.appendChild(cardBio)
+
+  cardDiv.classList.add('card')
+  cardInfo.classList.add('card-info')
+  cardName.classList.add('name')
+  cardUser.classList.add('username')
+
+  cardDiv.textContent = card
+  cardInfo.textContent = 'card-info'
+  cardName.textContent = 'name'
+  cardUser.textContent = 'username'
+  cardLocation.textContent = 'location'
+  cardProfile.textContent = 'profile'
+  cardFollowers.textContent = 'followers'
+  cardFollowing.textContent = 'following'
+  cardBio.textContent = 'bio'
+}
 /*
   List of LS Instructors Github username's:
     tetondan
