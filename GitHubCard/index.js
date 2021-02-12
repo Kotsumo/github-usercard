@@ -3,6 +3,15 @@
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
+import axios from 'axios'
+
+axios.get('https://api.github.com/users/Kotsumo')
+  .then(res => {
+    console.log()
+  })
+  .catch(err => {
+    debugger
+  })
 
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
